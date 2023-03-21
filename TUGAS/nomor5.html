@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Nilai Angka ke Nilai Huruf</title>
+</head>
+<body>
+    <h1>Convert Nilai Angka ke Nilai Huruf</h1>
+    <p>Masukkan nilai angka:</p>
+    <input type="number" id="nilai" oninput="convert()">
+    <p>Nilai huruf:</p>
+    <p id="hasil"></p>
+    <script>
+        function convert() {
+            var nilai = document.getElementById("nilai").value;
+            var hasil = document.getElementById("hasil");
+            if (nilai >= 0 && nilai <= 40) {
+                hasil.innerHTML = "E";
+            } else if (nilai >= 41 && nilai <= 55) {
+                hasil.innerHTML = "D";
+            } else if (nilai >= 56 && nilai <= 60) {
+                hasil.innerHTML = "C";
+            } else if (nilai >= 61 && nilai <= 65) {
+                hasil.innerHTML = "BC";
+            } else if (nilai >= 66 && nilai <= 70) {
+                hasil.innerHTML = "B";
+            } else if (nilai >= 71 && nilai <= 80) {
+                hasil.innerHTML = "AB";
+            } else if (nilai >= 81 && nilai <= 100) {
+                hasil.innerHTML = "A";
+            } else {
+                hasil.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>
